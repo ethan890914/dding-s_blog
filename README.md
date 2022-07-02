@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Intro
+This blog is written with Ruby on Rails.
 
-Things you may want to cover:
+* Version
+    - ruby 3.0.0
+    - rails 7.0.3
+* Deploy
+expect to deploy using heroku
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Note: Hope to become a drama review site.
