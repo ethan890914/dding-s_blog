@@ -18,6 +18,11 @@ Building the website with Ruby on Rails.
         - show page details: Including titles, intros, tags, casting, reviews, inspiring lyrics.
     - inspiring lyrics CRUD using reference to drama.
 
+## Details TBD
+- Breadcrumb on navbar
+- scrollspy on articles show
+- pagnigation on articles index
+
 ## Extra Feauture
 ---
 - Test unit

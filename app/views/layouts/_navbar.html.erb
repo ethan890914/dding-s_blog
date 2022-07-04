@@ -1,14 +1,16 @@
 <nav class="navbar fixed-top navbar-expand-lg bg-dark">
   <div class="container-fluid">
-    <ul class="navbar-nav ml-auto text-center">
+    <ul class="navbar-nav">
         <li>    
             <%= link_to image_tag('Drama',  alt: "", width: "64", height: "64"), root_path%>            
         </li>
+    </ul>
+    <ul class="nav justify-content-end">
         <li class="nav-item">
-            <%= link_to "Home", root_path, class: "nav-link", style: "color:white; padding:15px 15px; font-size: 24px"%>
+            <%= link_to "Home", root_path, class: "nav-link", style: "color:white; padding:15px; font-size: 20px"%>
         </li>
         <li class="nav-item">
-            <%= link_to "About", about_path, class: "nav-link", style: "color:white; padding:15px 15px; font-size: 24px"  %>
+            <%= link_to "About", about_path, class: "nav-link", style: "color:white; padding:15px; font-size: 20px"  %>
         </li>
     </ul>
   </div>
