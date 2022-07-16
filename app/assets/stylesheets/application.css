@@ -22,5 +22,49 @@
     padding-top:30px;
     margin-top:50px;
   }
+.fade-in{
+    margin: 80px;
+    padding: 80px;
+    opacity: 1;
+    height: 82vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+  }
 
-  
+  .main-window{
+    background-color: black;
+    color: white;
+    padding-top: 100px;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 20px;
+  }
+
+  .sidenav {
+    height: 800px;
+    width: 300px;
+    position: fixed;
+    top: 220px;
+    left: 20px;
+    overflow-x: hidden;
+    font-size: 25px;
+  }
+  .fixedButton{
+    position: fixed;
+    bottom: 0px;
+    right: 10px; 
+    padding: 20px;
+  }
+
+  .btn-circle{
+    width: 70px;
+    height: 70px;
+    padding: 2px 20px;
+    border-radius: 40px;
+    font-size: 40px;
+    /* line-height: 1.33; */
+  }
