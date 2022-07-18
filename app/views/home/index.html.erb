@@ -5,14 +5,15 @@
     <h1 class="text-center" >Today's Quote</h1><br/>
 
     <blockquote class="blockquote">
-    <p>A well-known quote, contained in a blockquote element.</p>
-  </blockquote>
-  <figcaption class="blockquote-footer">
-    Someone famous in <cite title="Source Title">Source Title</cite>
-  </figcaption>
+        <p>A well-known quote, contained in a blockquote element.</p>
+    </blockquote>
+    <figcaption class="blockquote-footer">
+        <cite title="Source Title">Source Title</cite>
+    </figcaption>
+
+    <div class="fixedButton" >
+        <%= link_to "+", new_article_path, class: "btn btn-outline-light btn-circle", 'data-bs-toggle': "tooltip", 'data-bs-placement': "top", 'title': "新增文章" %>
+    </div>
     </div>
 
-    <div class="fixedButton">
-        <%= link_to "+", about_path, class: "btn btn-outline-light btn-lg btn-circle" %>
-    </div>
   </main>

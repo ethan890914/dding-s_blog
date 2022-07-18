@@ -37,13 +37,23 @@
     background-color: black;
     color: white;
     padding-top: 100px;
-    height: 100vh;
+    height: 150vh;
     width: 100%;
     text-align: center;
     vertical-align: middle;
     font-size: 20px;
   }
 
+  .form-block{
+    /* margin: 10px; */
+    /* padding: 10px; */
+    opacity: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    font-size: 24px;
+  }
   .sidenav {
     height: 800px;
     width: 300px;
