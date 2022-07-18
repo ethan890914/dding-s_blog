@@ -1,24 +1,43 @@
+
 <div class="form-block", style="text-align:left">
 <%= form_with model: article do |form| %>
     <div style="margin-top:10px">
-        <%= form.label :title %><br>
+        <%= form.label :title, "Drama Name" %><br>
         <%= form.text_field :title, size:"70x1", class:"form-control" %>
         
     </div>
 
     <div style="margin-top:10px">
-        <%= form.label :body %><br>
+        <%= form.label :body, "Intro" %><br>
         <%= form.text_area :body, size:"70x5", class:"form-control" %>  
     </div>
 
     <div style="margin-top:10px">
-        <%= form.label :review %><br>
+        <%= form.label :review, "Review" %>
         <%= form.text_area :review, size:"70x5", class:"form-control" %>  
     </div>
 
-    <div style="text-align:right; margin-top:10px">
+    <div class="row" style="margin-top:15px">
+        
+        <%= form.label :tag_list, "Tags", class:"col-2 col-form-label text-align-left" %>
+        <div class="col-10">
+            <%#= select_tag "tag_list", options_from_collection_for_select(tag, "name", "name"), class:"col-10"%>
+            <div class="input-group mb-3">
+
+                <%= form.text_area :tag_list, placeholder: "#新增標籤", size:"30x1", class:"form-control" %>
+            </div>        
+        </div>
+        
+
+        
+    </div>
+    <div style="margin-top:10px; text-align:right">
         <%= form.submit 'Submit', class:"btn btn-small btn-light"%>
     </div>
-
+    
+    
+</div>
 <% end %>
 </div>
+
+  
