@@ -1,11 +1,15 @@
-<h1><%= @article.title %></h1>
-<p><%= @article.body %></p>
-<p><%= @article.tag_list %></p>
+<div class="main-window">
+    <h1><%= @article.title %></h1>
+        <h3>Intro:</h3>
+        <p></p><%= @article.body %></p>
+        <h3>Review: </h3>
+        <p></p><%= @article.review %></p>
+        <p><%= @article.tag_list %></p>
 
-<ul>
-    <li><%= link_to "Edit", edit_article_path(@article) %></li>
-    <li><%= link_to "Destoy", article_path(@article), data:{
-                            turbo_method: :delete,
-                            turbo_confirm: "確定刪除？"
-    } %></li>
-</ul>
+            <%= link_to "Edit", edit_article_path(@article), class: "btn btn-light"%>
+            <%= link_to "Remove", article_path(@article), data:{
+                                    turbo_method: :delete,
+                                    turbo_confirm: "確定刪除？"
+            }, class: "btn btn-light" %>
+
+</div>

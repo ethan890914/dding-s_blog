@@ -1,11 +1,9 @@
-<h1>Articles</h1>
+<div class="main-window">
+<h1>All Dramas</h1>
 
-<ul>
-    <% @articles.each do |article| %>
-    <li>
-        <%= link_to article.title, article%>
-    </li>
+
+    <% @articles.each do |article| %>    
+        <%= link_to article.title, article%><br/>
     <% end %>
-</ul>
 
-<%= link_to "New article", new_article_path %>
+</div>
