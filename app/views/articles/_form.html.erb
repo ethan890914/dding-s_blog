@@ -14,7 +14,7 @@
 
     <div style="margin-top:10px">
         <%= form.label :review, "Review" %>
-        <%= form.rich_text_area :review, size:"70x5", class:"form-control" %>  
+        <%= form.rich_text_area :review, class:"form-control", style:"min-height:20rem" %>  
     </div>
 
     <div class="row" style="margin-top:15px">
@@ -24,7 +24,7 @@
             <%#= select_tag "tag_list", options_from_collection_for_select(tag, "name", "name"), class:"col-10"%>
             <div class="input-group mb-3">
 
-                <%= form.text_area :tag_list, placeholder: "#新增標籤", size:"30x1", class:"form-control" %>
+                <%= form.text_area :tag_list, placeholder: "#Add New Tags", size:"30x1", class:"form-control" %>
             </div>        
         </div>
         
