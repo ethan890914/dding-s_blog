@@ -4,6 +4,7 @@
         <p></p><%= @article.body %></p>
         <h3>Review: </h3>
         <div><%= @article.review %></div>
+        <div>Ratings: <%= @article.rating %></div><br>
         <p><%= @article.tag_list %></p>
 
             <%= link_to "Edit", edit_article_path(@article), class: "btn btn-light"%>
