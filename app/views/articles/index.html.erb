@@ -1,6 +1,6 @@
 <div class="main-window">
 <h1>All Dramas</h1>
-
+<h3>Now we have <%= @count %> articles! </h3>
 
     <% @articles.each do |article| %>    
         <%= link_to article.title, article%><br/>

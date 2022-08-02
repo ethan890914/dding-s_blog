@@ -1,0 +1,16 @@
+<%= form_with model: [article, quote] do |form| %>
+    <p>
+        <%= form.label :character %><br>
+        <%= form.text_field :character %>
+    </p>
+    <p>
+        <%= form.label :line %><br>
+        <%= form.text_area :line %>
+    </p>
+    <p>
+        <%= form.submit "OK" %>
+    </p>
+   
+
+<% end %>
+

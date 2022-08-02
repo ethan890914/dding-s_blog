@@ -7,10 +7,14 @@
         <div>Ratings: <%= @article.rating %></div><br>
         <p><%= @article.tag_list %></p>
 
-            <%= link_to "Edit", edit_article_path(@article), class: "btn btn-light"%>
-            <%= link_to "Remove", article_path(@article), data:{
-                                    turbo_method: :delete,
-                                    turbo_confirm: "確定刪除？"
-            }, class: "btn btn-light" %>
+        <%= link_to "Edit", edit_article_path(@article), class: "btn btn-light"%>
+        <%= link_to "Remove", article_path(@article), data:{
+                                turbo_method: :delete,
+                                turbo_confirm: "確定刪除？"
+        }, class: "btn btn-light" %>
+    <h2>Comments</h2>
+        <%= render partial: "quotes/quote", collection: @article.quotes, as: :quote %>
+
+    <h2><%= link_to "Add a New Quote", new_article_quote_path(@article) %></h2>    
 
 </div>

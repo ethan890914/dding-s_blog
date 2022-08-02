@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   def index
     @articles = Article.all
+    @count = Article.count
   end
 
   def show
@@ -31,7 +32,7 @@ class ArticlesController < ApplicationController
     if @article.update(article_params)
       redirect_to @article
     else
-      render 'edit', status: :unprocessable_entit
+      render 'edit', status: :unprocessable_entity
       end
   end
 

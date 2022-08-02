@@ -5,5 +5,7 @@ Rails.application.routes.draw do
   root "home#index"
   get 'about', to: "home#about"
   
-  resources :articles
+  resources :articles do 
+    resources :quotes
+  end
 end

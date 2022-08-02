@@ -1,0 +1,14 @@
+<p>
+    <strong>Character:</strong><br/>
+    <%= quote.character %>
+</p>
+
+<p>
+    <strong>Line:</strong><br/>
+    <%= quote.line %>
+</p>
+<%= link_to "Edit", edit_article_quote_path(quote.article, quote), class: "btn btn-light"%>
+<%= link_to "Remove", [quote.article, quote], data:{
+                            turbo_method: :delete,
+                            turbo_confirm: "確定刪除？"
+    }, class: "btn btn-light" %>
