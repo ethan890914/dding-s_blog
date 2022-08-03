@@ -5,10 +5,10 @@
     <h1 class="text-center" >Today's Quote</h1><br/>
 
     <blockquote class="blockquote">
-        <p>A well-known quote, contained in a blockquote element.</p>
+        <p><%= @quote.line %></p>
     </blockquote>
     <figcaption class="blockquote-footer">
-        <cite title="Source Title">Source Title</cite>
+        <%= @quote.character %><<cite title="Source Title"><%= @quote.article.title %></cite>>
     </figcaption>
 
     <div class="fixedButton" >
