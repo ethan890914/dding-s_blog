@@ -1,9 +1,30 @@
 <div class="main-window">
-<h1>All Dramas</h1>
-<h3>Now we have <%= @count %> articles! </h3>
+<div class="row">
+    <div class="col-3"></div>
+    <div class="col-6">
+        <div style="text-align:left">
+            <h1>All Dramas</h1>
+            <h3>Now we have <%= @count %> articles! </h3>
 
-    <% @articles.each do |article| %>    
-        <%= link_to article.title, article%><br/>
-    <% end %>
+            <table class="table table-hover">
+            <thead>
+                <tr>
+                    <td style="color:white; width:85%">Name</td>
+                    <td style="color:white; width:15%">rating</td>
+                </tr>
+            </thead>
+            <tbody>
+            <% @articles.each do |article| %>    
+                <tr class="tr">
+                    <td><%= link_to article.title, article,  style: "text-decoration:none; color:white"%></td>
+                    <td><span class="badge bg-secondary bg"><%= article.rating %> ☆</span></td>                    
+                </tr>
+            <% end %>
+            </tbody>
+            </table>
 
+        </div>
+    <div class="col-3"> </div>
+    </div>
+</div>
 </div>

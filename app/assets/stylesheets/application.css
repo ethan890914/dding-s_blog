@@ -94,3 +94,15 @@
   position: sticky;
   top: 200px;
 }
+
+.table-hover{
+  background-color: black;
+  border-color: darkgray;
+}
+
+.tr{
+ line-height: 60px;
+}
+.tr:hover{
+  background-color: darkgray;
+}
