@@ -50,6 +50,10 @@ gem 'bootstrap', '~> 5.0.2'
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 gem "image_processing", "~> 1.2"
 
+#pagination
+gem 'kaminari'
+gem 'bootstrap5-kaminari-views'
+
 # adding tag features
 gem 'acts-as-taggable-on', '~> 9.0'
 group :development, :test do

@@ -131,4 +131,28 @@
   padding-left: 25%;
   /* text-align: left; */
 }
-
+.pagination {
+  justify-content: center;
+  padding: 10px;
+  margin: 3px;
+}
+.pagination a {
+  padding: 2px 5px 2px 5px;
+  margin: 2px;
+  text-decoration: none;
+  color: white;
+}
+.pagination a:hover, .pagination a:active {
+  color: darkgray;
+}
+.pagination span.current {
+  padding: 2px 5px 2px 5px;
+  margin: 2px;
+  /* font-weight: bol; */
+  color:goldenrod;
+}
+.pagination span.disabled {
+  padding: 2px 5px 2px 5px;
+  margin: 2px;
+  color: white;
+}

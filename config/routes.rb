@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'about', to: "home#about"
   
   resources :articles do 
+    get '/articles/:page', action: :index, on: :collection
     resources :quotes
   end
 end
