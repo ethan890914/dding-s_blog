@@ -4,20 +4,20 @@
     <div class="col-6">
         <div style="text-align:left">
             <h1>All Dramas</h1>
-            <h3>Now we have <%= @count %> articles! </h3>
+            <h5>Now we have <%= @count %> articles! </h5>
 
             <table class="table table-hover">
             <thead>
                 <tr>
-                    <td style="color:white; width:85%">Name</td>
-                    <td style="color:white; width:15%">rating</td>
+                    <th style="color:darkgray; width:85%">Name</th>
+                    <th style="color:darkgray; width:15%">rating</th>
                 </tr>
             </thead>
             <tbody>
             <% @articles.each do |article| %>    
                 <tr class="tr">
                     <td><%= link_to article.title, article,  style: "text-decoration:none; color:white"%></td>
-                    <td><span class="badge bg-secondary bg"><%= article.rating %> ☆</span></td>                    
+                    <td><span class="badge bg-secondary bg"><%= article.rating %> ⭐</span></td>                    
                 </tr>
             <% end %>
             </tbody>

@@ -1,14 +1,17 @@
-<p>
-    <strong>Character:</strong><br/>
-    <%= quote.character %>
-</p>
+<div class="row" style="padding-left:25%; padding-top:8px">
+    <div class="col-1">
+        <em><%= quote.character %></em>
+    </div>
+    <div class="col-6">
+        <strong><%= quote.line %></strong>
+    </div>
+    <div class="col-2">
+        <%= link_to "Edit", edit_article_quote_path(quote.article, quote), class: "btn btn-sm btn btn-outline-info"%>
+        <%= link_to "Remove", [quote.article, quote], data:{
+                                turbo_method: :delete,
+                                turbo_confirm: "確定刪除？"
+            }, class: "btn btn-sm btn btn-outline-danger" %>
+    </div>
+</div>
 
-<p>
-    <strong>Line:</strong><br/>
-    <%= quote.line %>
-</p>
-<%= link_to "Edit", edit_article_quote_path(quote.article, quote), class: "btn btn-light"%>
-<%= link_to "Remove", [quote.article, quote], data:{
-                            turbo_method: :delete,
-                            turbo_confirm: "確定刪除？"
-    }, class: "btn btn-light" %>
+

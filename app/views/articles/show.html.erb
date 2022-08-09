@@ -1,20 +1,45 @@
-<div class="main-window">
-    <h1><%= @article.title %></h1>
-        <h3>Intro:</h3>
-        <p></p><%= @article.body %></p>
-        <h3>Review: </h3>
-        <div><%= @article.review %></div>
-        <div>Ratings: <%= @article.rating %></div><br>
-        <p><%= @article.tag_list %></p>
-
-        <%= link_to "Edit", edit_article_path(@article), class: "btn btn-light"%>
-        <%= link_to "Remove", article_path(@article), data:{
+<div style="background-color:black; color:white;padding-bottom: 200px;">
+    <div class="row sticky-title" style="text-align:right">
+        <div class="col-4">
+            <h1><%= @article.title %></h1>
+        </div>
+        <div class="col-2" style="text-align:left">
+            <h5>
+            <% @article.tag_list.each do |tag| %>
+                <span class="badge rounded-pill bg-secondary">
+                    <%= tag %>
+                </span>
+            <% end %>
+            </h5>
+        </div>
+        <div class="col-2">Rating <br/> ⭐ <strong><%= @article.rating %></strong> / 5</div>
+        <div class="col-2">
+            <%= link_to "Edit", edit_article_path(@article), class: "btn btn-outline-info"%>
+            <%= link_to "Remove", article_path(@article), data:{
                                 turbo_method: :delete,
                                 turbo_confirm: "確定刪除？"
-        }, class: "btn btn-light" %>
-    <h2>Comments</h2>
-        <%= render partial: "quotes/quote", collection: @article.quotes, as: :quote %>
+                }, class: "btn btn-outline-danger" %>
+        </div>
+    </div>
 
-    <h2><%= link_to "Add a New Quote", new_article_quote_path(@article) %></h2>    
+    <div class="row">
+        <div class="col-3"></div>
+        <h3 class="paragraph-title"> Introduction </h3>      
+        <div class="col-5"></div>
+    </div>
+    <div class="paragraph-content"><%= @article.body %></div>      
+    <div class="row">
+        <div class="col-3"></div>
+        <h3 class="paragraph-title"> Review </h3>      
+        <div class="col-5"></div>
+    </div>
+    <div class="paragraph-content"><%= @article.review %></div>      
+    <div class="row">
+        <div class="col-3"></div>
+        <h3 class="paragraph-title"> Quotes </h3>      
+        <div class="col-5" style="padding-top:4%;padding-left:30%"><%= link_to "New Quote", new_article_quote_path(@article),class:"btn btn-light",style:"text-decoration: none;font-size:10px" %></div>
+    </div>    
+    <%= render partial: "quotes/quote", collection: @article.quotes, as: :quote %>
+
 
 </div>
